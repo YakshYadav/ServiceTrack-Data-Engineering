@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/Delta_Lake-00AADC?style=for-the-badge&logo=databricks&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
   <img src="https://img.shields.io/badge/Unity_Catalog-FF3621?style=for-the-badge&logo=databricks&logoColor=white" />
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
 </p>
 
 <p align="center">
@@ -38,7 +39,23 @@ The dashboards below visualize the final Gold-layer data, tracking technician ef
 ![Dashboard Part 1](./dashboard1.png.png)
 ![Dashboard Part 2](./dashboard2.png.png)
 
+> **Note:** keep `dashboard1.png` and `dashboard2.png` in the same folder as this README (not `dashboard1.png.png` — GitHub won't resolve the double extension).
 
+---
+
+## 🖥️ Dashboard (Power BI)
+
+On top of the three Gold Delta tables, a Power BI dashboard was built to make the pipeline's output usable by non-technical stakeholders without needing to write any SQL.
+
+**How it's connected:** Power BI connects directly to the Gold layer through the Databricks connector (`Get Data → Databricks`), pointing at the SQL Warehouse and the `servicetrack` catalog/schema where `SLA_Performance_Gold`, `Technician_Efficiency_Gold`, and `Failure_Trends_Gold` are registered. Since Gold is already pre-aggregated, Power BI doesn't need to do any heavy transformation itself — it's a thin, fast reporting layer on top of tables Spark already did the hard work to produce.
+
+**What's on the dashboard:**
+- SLA compliance % by device brand and device type, with on-time vs delayed jobs broken out
+- Technician leaderboard — average repair duration, completed repair count, and revenue per technician
+- Device/model failure trends — repair volume and total repair cost by brand and model series
+- Slicers for filtering by device brand, technician, and job status so a manager can drill into any one view without touching the underlying data
+
+**Why Power BI here:** the Gold layer is deliberately small and pre-aggregated (43 / 8 / 43 rows across the three tables) specifically so that a lightweight BI tool can refresh and render it near-instantly — this mirrors how a real service centre manager would actually consume the pipeline's output day to day, rather than opening a notebook.
 
 ---
 
@@ -107,6 +124,7 @@ Every run executes 5 automated checks before Gold data is considered final — r
 | **Auto Loader** | Incremental, checkpointed CSV ingestion with schema tracking |
 | **Unity Catalog Volumes** | Governed storage for source files and Delta tables |
 | **Spark SQL** | Window functions, CTEs, `GROUP BY … HAVING` for repeat-customer and recency analytics |
+| **Power BI** | Reporting layer on top of Gold — connects directly to Databricks via the SQL Warehouse connector, no separate ETL needed |
 
 **Performance:** `OPTIMIZE` + `ZORDER BY (device_brand, technician_id)` on the Silver enriched table, compaction on all Gold tables, and `VACUUM` with a safe 168-hour retention window.
 
@@ -117,7 +135,7 @@ Every run executes 5 automated checks before Gold data is considered final — r
 - `ServiceTrack_Pipeline.ipynb` — the full Databricks notebook (import directly)
 - `PROJECT_OVERVIEW_SIMPLE.md` — plain-language explanation of the project
 - `ServiceTrack_Project_Report.docx` — formal written report
-- `dashboard1.png`, `dashboard2.png` — Gold-layer dashboard screenshots
+- `dashboard1.png.png`, `dashboard2.png.png` — Gold-layer dashboard screenshots
 
 ---
 
