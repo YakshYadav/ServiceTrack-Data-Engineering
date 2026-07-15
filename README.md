@@ -19,9 +19,9 @@
 ## 📊 Business Impact & Final Dashboard
 This project transforms raw, messy service center exports into a structured analytics infrastructure. The dashboards below visualize the final Gold-layer data, tracking technician efficiency, SLA compliance, and device failure trends.
 
-![Dashboard Part 1](dashboard1.png)
+![Dashboard Part 1](dashboard1.png.png)
 
-![Dashboard Part 2](dashboard2.png)
+![Dashboard Part 2](dashboard2.png.png)
 
 ---
 
