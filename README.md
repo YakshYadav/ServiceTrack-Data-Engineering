@@ -30,3 +30,12 @@ graph LR
     style C fill:#c0c0c0,stroke:#333,stroke-width:2px
     style D fill:#ffd700,stroke:#333,stroke-width:2px
     style E fill:#87cefa,stroke:#333,stroke-width:2px
+
+    ---
+
+### 📝 Project Details
+| 🏢 Company | 👨‍💻 Data Engineer | 👨‍🏫 Mentor(s) | 👩‍💼 HR Coordinator |
+| :--- | :--- | :--- | :--- |
+| **Celebal Technologies** | Yaksh Yadav | [Yashashvi Dubey](https://www.linkedin.com/in/yashashvi-dubey-92a3862a8/) & [Raj Biswas](https://www.linkedin.com/in/raj-biswas-1a07aa277/) | [Priyanshi Jain](https://www.linkedin.com/in/priyanshi-jain20/) |
+
+---
