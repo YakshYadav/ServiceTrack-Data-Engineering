@@ -7,12 +7,22 @@
   <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
 </p>
 
+---
+
+### 📝 Project Details
+| 🏢 Company | 👨‍💻 Data Engineer | 👨‍🏫 Mentor(s) | 👩‍💼 HR Coordinator |
+| :--- | :--- | :--- | :--- |
+| **Celebal Technologies** | Yaksh Yadav | [Yashashvi Dubey](https://www.linkedin.com/in/yashashvi-dubey-92a3862a8/) & [Raj Biswas](https://www.linkedin.com/in/raj-biswas-1a07aa277/) | [Priyanshi Jain](https://www.linkedin.com/in/priyanshi-jain20/) |
+
+---
+
 ## 📊 Business Impact & Final Dashboard
 This project transforms raw, messy service center exports into a structured analytics infrastructure. The dashboards below visualize the final Gold-layer data, tracking technician efficiency, SLA compliance, and device failure trends.
 
-![Dashboard Part 1](dashboard1.png.png)
+![Dashboard Part 1](dashboard1.png)
 
-![Dashboard Part 2](dashboard2.png.png)
+![Dashboard Part 2](dashboard2.png)
+
 ---
 
 ## 🏗️ Pipeline Architecture (Medallion Design)
@@ -30,12 +40,3 @@ graph LR
     style C fill:#c0c0c0,stroke:#333,stroke-width:2px
     style D fill:#ffd700,stroke:#333,stroke-width:2px
     style E fill:#87cefa,stroke:#333,stroke-width:2px
-
-    ---
-
-### 📝 Project Details
-| 🏢 Company | 👨‍💻 Data Engineer | 👨‍🏫 Mentor(s) | 👩‍💼 HR Coordinator |
-| :--- | :--- | :--- | :--- |
-| **Celebal Technologies** | Yaksh Yadav | [Yashashvi Dubey](https://www.linkedin.com/in/yashashvi-dubey-92a3862a8/) & [Raj Biswas](https://www.linkedin.com/in/raj-biswas-1a07aa277/) | [Priyanshi Jain](https://www.linkedin.com/in/priyanshi-jain20/) |
-
----
