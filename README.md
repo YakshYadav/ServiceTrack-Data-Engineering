@@ -38,7 +38,7 @@ The dashboards below visualize the final Gold-layer data, tracking technician ef
 ![Dashboard Part 1](./dashboard1.png.png)
 ![Dashboard Part 2](./dashboard2.png.png)
 
-> **Note:** keep `dashboard1.png` and `dashboard2.png` in the same folder as this README (not `dashboard1.png.png` — GitHub won't resolve the double extension).
+
 
 ---
 
